@@ -1,4 +1,26 @@
 /* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+    --clr-white: 0 0% 100%;
+    --clr-dark: 240 67% 8%;
+    --clr-accent-dark: 240 17% 26%;
+    --clr-accent-light: 240 6% 54%;
+
+    --clr-mercury: 194 48% 49%;
+    --clr-venus: 33 82% 61%;
+    --clr-earth: 263 67% 51%;
+    --clr-mars: 10 63% 51%;
+
+    --clr-jupiter: 216 58% 52%;
+    --clr-saturn: 205 81% 32%;
+    --clr-uranus: 169 73% 44%;
+    --clr-neptune: 240 87% 56%;
+}
+
+
+/* ------------------- */
 /* Reset               */
 /* ------------------- */
 
@@ -62,6 +84,8 @@ select {
 /* Utility classes     */
 /* ------------------- */
 
+/* general */
+
 .flex {
     display: flex;
     gap: var(--gap, 1rem);
@@ -89,4 +113,26 @@ select {
   white-space: nowrap; /* added line */
   border: 0;
 }
+
+/* colors */
+
+.bg-white { background-color: hsl( var(--clr-white) );}
+.bg-dark { background-color: hsl( var(--clr-dark) );}
+.bg-accent { background-color: hsl( var(--clr-accent-dark) );}
+.bg-accent-light { background-color: hsl( var(--clr-accent-light) );}
+
+.bg-mercury { background-color: hsl( var(--clr-mercury) );}
+.bg-venus { background-color: hsl( var(--clr-venus) );}
+.bg-earth { background-color: hsl( var(--clr-earth) );}
+.bg-mars { background-color: hsl( var(--clr-mars) );}
+.bg-jupiter { background-color: hsl( var(--clr-jupiter) );}
+.bg-saturn { background-color: hsl( var(--clr-saturn) );}
+.bg-uranus { background-color: hsl( var(--clr-uranus) );}
+.bg-neptune { background-color: hsl( var(--clr-neptune) );}
+
+.text-white { color: hsl( var(--clr-white) );}
+.text-dark { color: hsl( var(--clr-dark) );}
+.text-accent { color: hsl( var(--clr-accent-light) );}
+
+
 
