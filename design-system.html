@@ -1,102 +1,93 @@
 <html>
     <head>
         <title>Design system</title>
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <div class="container ">
-            <h1>Design system</h1>
-            <section id="colors">
-                <h2 class="ff-antonio fs-500"><span class="text-accent">01</span> colors</h2>
-                <div class="grid" style="grid-template-columns: 1fr 1fr 1fr 1fr; ">
+        <div class="container">
+            <div class="flex ff-antonio uppercase" style="justify-content: space-between; margin: 2rem 0">
+                <h1 style="font-size:28px">The Planets</h1>
+                <h1 class="flex fs-500">Design system</h1>
+            </div>
+            
+            <section id="colors" class="flow" style="margin: 4rem 0; --flow-space:3rem">
+                <h2 class="ff-antonio fs-500 uppercase"><span class="text-accent" style="margin-right:2rem">01</span> colors</h2>
+                <div class="grid " style="grid-template-columns: 1fr 1fr 1fr 1fr; gap:2rem">
                     <div style="flex-grow: 1;">
                         <div class="bg-white text-dark" style="padding: 3rem 1rem 1rem; ">#FFFFFF</div>
                         <p><span class="text-accent">RGB</span> 255, 255, 255</p>
                         <p><span class="text-accent">HSL</span> 0°, 0%, 100%</p>
                     </div>
-
                     <div style="flex-grow: 1;">
                         <div class="bg-dark text-white" style="padding: 3rem 1rem 1rem; border: 1px solid white">#070724</div>
                         <p><span class="text-accent">RGB</span> 7, 7, 36</p>
                         <p><span class="text-accent">HSL</span> 240°, 67%, 8%</p>
                     </div>
-
                     <div style="flex-grow: 1;">
                         <div class="bg-accent text-light" style="padding: 3rem 1rem 1rem; ">#38384F</div>
-                        <p><span class="text-accent">RGB</span> 208, 214, 249</p>
+                        <p><span class="text-accent">RGB</span> 56, 56, 79</p>
                         <p><span class="text-accent">HSL</span> 240°, 17%, 26%</p>
                     </div>
-
                     <div style="flex-grow: 1;">
                         <div class="bg-accent-light text-light" style="padding: 3rem 1rem 1rem; ">#838391</div>
                         <p><span class="text-accent">RGB</span> 131, 131, 145</p>
                         <p><span class="text-accent">HSL</span> 240°, 6%, 54%</p>
                     </div>
-
                     <div style="flex-grow: 1;">
-                        <div class="bg-mercury text-light" style="padding: 3rem 1rem 1rem; ">#838391</div>
+                        <div class="bg-mercury text-light" style="padding: 3rem 1rem 1rem; ">#419EBB</div>
                         <p><span class="text-accent">RGB</span> 65, 158, 187</p>
-                        <p><span class="text-accent">HSL</span> 194 48% 49%</p>
+                        <p><span class="text-accent">HSL</span> 194° 48% 49%</p>
                     </div>
-
                     <div style="flex-grow: 1;">
-                        <div class="bg-venus text-light" style="padding: 3rem 1rem 1rem; ">#838391</div>
+                        <div class="bg-venus text-light" style="padding: 3rem 1rem 1rem; ">#EDA249</div>
                         <p><span class="text-accent">RGB</span> 237, 162, 73</p>
-                        <p><span class="text-accent">HSL</span> 33 82% 61%</p>
+                        <p><span class="text-accent">HSL</span> 33° 82% 61%</p>
                     </div>
-
                     <div style="flex-grow: 1;">
-                        <div class="bg-earth text-light" style="padding: 3rem 1rem 1rem; ">#838391</div>
+                        <div class="bg-earth text-light" style="padding: 3rem 1rem 1rem; ">#6f2ED6</div>
                         <p><span class="text-accent">RGB</span> 109, 46, 213</p>
-                        <p><span class="text-accent">HSL</span> 263 67% 51%</p>
+                        <p><span class="text-accent">HSL</span> 263° 67% 51%</p>
                     </div>
-
                     <div style="flex-grow: 1;">
-                        <div class="bg-mars text-light" style="padding: 3rem 1rem 1rem; ">#838391</div>
+                        <div class="bg-mars text-light" style="padding: 3rem 1rem 1rem; ">#D14C32</div>
                         <p><span class="text-accent">RGB</span> 209, 76, 50</p>
-                        <p><span class="text-accent">HSL</span> 10 63% 51%</p>
+                        <p><span class="text-accent">HSL</span> 10° 63% 51%</p>
                     </div>
-
                     <div style="flex-grow: 1;">
-                        <div class="bg-jupiter text-light" style="padding: 3rem 1rem 1rem; ">#838391</div>
+                        <div class="bg-jupiter text-light" style="padding: 3rem 1rem 1rem; ">#D83A34</div>
                         <p><span class="text-accent">RGB</span> 216, 58, 52</p>
-                        <p><span class="text-accent">HSL</span> 216 58% 52%</p>
+                        <p><span class="text-accent">HSL</span> 2°, 68%, 53%</p>
                     </div>
-
                     <div style="flex-grow: 1;">
-                        <div class="bg-saturn text-light" style="padding: 3rem 1rem 1rem; ">#838391</div>
+                        <div class="bg-saturn text-light" style="padding: 3rem 1rem 1rem; ">#CD5120</div>
                         <p><span class="text-accent">RGB</span> 205, 81, 32</p>
-                        <p><span class="text-accent">HSL</span> 205 81% 32%</p>
+                        <p><span class="text-accent">HSL</span> 17°, 73%, 46%</p>
                     </div>
-
                     <div style="flex-grow: 1;">
-                        <div class="bg-uranus text-light" style="padding: 3rem 1rem 1rem; ">#838391</div>
+                        <div class="bg-uranus text-light" style="padding: 3rem 1rem 1rem; ">#1EC2A4</div>
                         <p><span class="text-accent">RGB</span> 30, 193, 162</p>
                         <p><span class="text-accent">HSL</span> 169 73% 44%</p>
                     </div>
-
                     <div style="flex-grow: 1;">
-                        <div class="bg-neptune text-light" style="padding: 3rem 1rem 1rem; ">#838391</div>
+                        <div class="bg-neptune text-light" style="padding: 3rem 1rem 1rem; ">#2D68F0</div>
                         <p><span class="text-accent">RGB</span> 45, 104, 240</p>
-                        <p><span class="text-accent">HSL</span> 240 87% 56%</p>
+                        <p><span class="text-accent">HSL</span> 222°, 87%, 56%</p>
                     </div>
-                    
                 </div>
             </section>
 
-            <section id="colors">
-                <h2 class="ff-antonio fs-500"><span class="text-accent">02</span> Typography</h2>
+            <section id="typography" class="flow" style="margin: 4rem 0; --flow-space:3rem">
+                <h2 class="ff-antonio fs-500 uppercase"><span class="text-accent" style="margin-right:2rem">02</span> Typography</h2>
                 <div class="flex">
-                    <div style="flex-basis: 100%">
-                        <div>
+                    
+                    <div class="flow" style="flex-basis: 100%">
+                        <div style="border: 1px solid hsl( var(--clr-accent-light) ); padding: 2em"">
                             <p  class="fs-500 ff-antonio uppercase">ANTONIO</p>
                             <p class="text-accent ff-antonio" style="font-size: 20px;line-height: 37px; letter-spacing: 9.45px; overflow-wrap: anywhere ">ABCDEFGHIJLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz12345667890!@#$%^&*()_+</p>
                         </div>
-                       
                         <div> 
                             <p class="text-accent">H1 | - Antonio Medium | 80px | 103px Line</p>
                             <p class="fs-600 ff-antonio uppercase" >Donec justo eget</p>
@@ -115,25 +106,38 @@
                         </div>
                     </div>
     
-                    <div style="flex-basis: 100%">
-                        <div>
+                    <div class="flow" style="flex-basis: 100%">
+                        <div style="border: 1px solid hsl( var(--clr-accent-light) ); padding: 2em">
                             <p class="fs-500">Spartan</p>
                             <p class="text-accent" style="line-height: 37px; letter-spacing: 7.415px; overflow-wrap: anywhere">ABCDEFGHIJLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz12345667890!@#$%^&*()_+</p>
                         </div>
-                        <div> 
-                            <p class="text-accent">Body | - Spartan Regular | 14px | 25px Line</p>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna. Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus.</p>
+                        <div style="padding: 0 4em"> 
+                            <p class="text-accent" style="margin-bottom: 1.5em">Body | - Spartan Regular | 14px | 25px Line</p>
+                            <p >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna. Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus.</p>
                         </div>
-
                     </div>
-    
                 </div>
                 
-
             </section>
-        </div>
-        
-        
+
+            <section id="buttons" class="flow" style="margin: 4rem 0; --flow-space:3rem">
+                <h2 class="ff-antonio fs-500 uppercase"><span class="text-accent" style="margin-right:2rem">03</span> buttons</h2>
+                <div class="flex" style="--gap:2rem">
+                    <div style="flex-basis: 100%">
+                        <button class="button "><span>01</span>Button</button>
+                        <p class="grid uppercase " style="justify-content: center; margin-top: 1em; opacity: 0.4;">default</p>
+                    </div>
+                    <div style="flex-basis: 100%">
+                        <button class="button "><span>01</span>Button</button>
+                        <p class="grid uppercase " style="justify-content: center; margin-top: 1em; opacity: 0.4;">active</p>
+                    </div>
+                    <div style="flex-basis: 100%">
+                        <button class="button "><span>01</span>Button</button>
+                        <p class="grid uppercase " style="justify-content: center; margin-top: 1em; opacity: 0.4;">hover</p>
+                    </div>
+                </div>
+                <p class="grid " style="justify-content: center; margin-top: 1em; opacity: 0.4;">*Active button color will differ each page</p>
+            </section>
         <script src="index.pack.js"></script>
     </body>
 </html>
