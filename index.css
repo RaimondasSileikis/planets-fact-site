@@ -1,6 +1,4 @@
-/* ------------------- */
 /* Custom properties   */
-/* ------------------- */
 
 :root {
     --clr-white: 0 0% 100%;
@@ -17,23 +15,26 @@
     --clr-saturn: 205 81% 32%;
     --clr-uranus: 169 73% 44%;
     --clr-neptune: 240 87% 56%;
+
+
+     --ff-normal: 'League Spartan', sans-serif;
+     --ff-antonio:'Antonio', sans-serif;
+
+     --fs-600: 5rem; /*80px*/
+     --fs-500: 2.5rem; /*40 px*/
+     --fs-400: 0.875rem;/*14 px*/
+     --fs-300: 0.75rem; /*12 px*/
+     --fs-200: 0.6875rem; /*11 px*/
+    
 }
 
-
-/* ------------------- */
 /* Reset               */
-/* ------------------- */
-
-/* https://piccalil.li/blog/a-modern-css-reset/ */
-
-/* Box sizing */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/* Reset margins */
 body,
 h1,
 h2,
@@ -46,20 +47,31 @@ picture {
     margin: 0; 
 }
 
-/* set up the body */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
 body {
+    font-family: var(--ff-normal);
+    font-size: var(--fs-400);
+    color: hsl(var(--clr-white));
+    background-color: hsl( var(--clr-dark) );
     line-height: 1.5;
     min-height: 100vh;
 }
 
-/* make images easier to work with */
 img,
-picutre {
+picture {
     max-width: 100%;
     display: block;
 }
 
-/* make form elements easier to work with */
 input,
 button,
 textarea,
@@ -67,7 +79,6 @@ select {
     font: inherit;
 }
 
-/* remove animations for people who've turned them off */
 @media (prefers-reduced-motion: reduce) {  
   *,
   *::before,
@@ -79,12 +90,7 @@ select {
   }
 }
 
-
-/* ------------------- */
 /* Utility classes     */
-/* ------------------- */
-
-/* general */
 
 .flex {
     display: flex;
@@ -110,11 +116,9 @@ select {
   margin: -1px; 
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  white-space: nowrap; /* added line */
+  white-space: nowrap; 
   border: 0;
 }
-
-/* colors */
 
 .bg-white { background-color: hsl( var(--clr-white) );}
 .bg-dark { background-color: hsl( var(--clr-dark) );}
@@ -135,4 +139,32 @@ select {
 .text-accent { color: hsl( var(--clr-accent-light) );}
 
 
+.ff-normal {font-family: var(--ff-normal);};
+.ff-antonio {font-family: var(--ff-antonio);};
+
+.fs-600 {
+    font-size: var(--fs-600);
+    line-height: 6,4375rem
+};
+.fs-500 {
+    font-size: var(--fs-500);
+    line-height: 3.25rem;
+    letter-spacing: 0,0938rem;
+};
+.fs-200,
+.fs-300,
+.fs-400 {
+    font-size: var(--fs-400);
+    line-height: 1,5625rem;
+};
+.fs-300 {
+    font-size: var(--fs-300);
+    letter-spacing: 0,1625rem;
+};
+.fs-200 {
+    font-size: var(--fs-200);
+    letter-spacing: 0,0938rem;
+};
+
+.uppercase{ text-transform: uppercase;};
 
