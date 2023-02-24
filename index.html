@@ -5,20 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="index.css">
   <title>Frontend Mentor | Planets fact site</title>
 </head>
 <body>
-  Mercury
+
+  <header class="primary-header flex">
+    <div class="fs-500 ff-antonio uppercase">The planets</div>
+    <nav>
+      <ul class="primary-navigation flex  overline-indicators uppercase fs-200">
+        <li><a class="text-white" href="#">Mercury</a></li>
+        <li><a class=" text-white" href="#">Venus</a></li>
+        <li><a class=" text-white" href="#">Earth</a></li>
+        <li><a class=" text-white" href="#">Mars</a></li>
+        <li><a class=" text-white" href="#">Jupiter</a></li>
+        <li><a class=" text-white" href="#">Saturn</a></li>
+        <li><a class=" text-white" href="#">Uranus</a></li>
+        <li><a class=" text-white" href="#">Neptune</a></li>
+
+      </ul>
+
+    </nav>
+
+
+  </header>
+
+  <div class="container">
+
+ 
+<h1>Mercury</h1>
+  
 
   <!-- Overview Content Start -->
-
-  Mercury is the smallest planet in the Solar System and the closest 
+<p>Mercury is the smallest planet in the Solar System and the closest 
   to the Sun. Its orbit around the Sun takes 87.97 Earth days, the 
   shortest of all the Sun's planets. Mercury is one of four terrestrial 
-  planets in the Solar System, and is a rocky body like Earth.
-
-  Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet) -->
+  planets in the Solar System, and is a rocky body like Earth.</p>
+  
+<p>Source <a href="https://en.wikipedia.org/wiki/Mercury_(planet)">Wikipedia</a></p>
+   <!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet) -->
 
   <!-- Overview Content End -->
 
@@ -43,21 +72,34 @@
   Source : Wikipedia <!-- URL: https://en.wikipedia.org/wiki/Mercury_(planet)#Surface_geology -->
 
   <!-- Surface Geology Content End -->
+  <div>
+    <button class="button "><span>01</span>Overview</button>
+    <button class="button "><span>02</span>Internal Structure</button>
+    <button class="button "><span>03</span>Surface Geology</button>
+  </div>
+ 
 
-  01 Overview
-  02 Internal Structure
-  03 Surface Geology
+  <div>
+    <div>
+      <h4>Rotation Time</h4>
+      <h2>58.6 Days</h2>
+    </div>
+    <div>
+      <h4>Revolution Time</h4>
+      <h2>87.97 Days</h2>
+    </div>
+    <div>
+      <h4>Radius</h4>
+      <h2>2,439.7 KM</h2>
+    </div>
+    <div>
+      <h4>Average Temp.</h4>
+      <h2>430°c</h2>
+    </div>
+  </div>
 
-  Rotation Time
-  58.6 Days
+  
+</div>
 
-  Revolution Time
-  87.97 Days
-
-  Radius
-  2,439.7 KM
-
-  Average Temp.
-  430°c
 </body>
 </html>
