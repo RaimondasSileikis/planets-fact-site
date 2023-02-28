@@ -14,19 +14,23 @@
   </head>
   <body class="mercury">
 
-    <header class="primary-header flex">
-      <div class="fs-500 ff-antonio uppercase">The planets</div>
+    <header  class="primary-header underline flex">
+      <div class="logo bg-dark flex " >
+        <h1 class=" fs-500 ff-antonio uppercase flex" >The planets</h1>
+        <button aria-controls="primary-navigation" aria-expanded="false" class="mobile-nav-toggle" ><span class="sr-only" >Menu</span></button>
+       
+        </div>
       <nav>
-        <ul class="primary-navigation flex  overline-indicators uppercase fs-200">
-          <li><a class="text-white" href="#">Mercury</a></li>
-          <li><a class=" text-white" href="#">Venus</a></li>
-          <li><a class=" text-white" href="#">Earth</a></li>
-          <li><a class=" text-white" href="#">Mars</a></li>
-          <li><a class=" text-white" href="#">Jupiter</a></li>
-          <li><a class=" text-white" href="#">Saturn</a></li>
-          <li><a class=" text-white" href="#">Uranus</a></li>
-          <li><a class=" text-white" href="#">Neptune</a></li>
-
+        <ul id="primary-navigation" data-visible="true" class="primary-navigation bg-dark overline-indicators uppercase fs-200 flex">
+          <li class="active" ><a class=" text-white flex" href="#"><span class="bg-mercury "></span>Mercury<img src="/assets/icon-chevron.svg" alt="Arrow"></a></li>
+          <li><a class=" text-white flex" href="#"><span class="bg-venus "></span>Venus<img src="/assets/icon-chevron.svg" alt="Arrow"></a></li>
+          <li><a class=" text-white flex" href="#"><span class="bg-earth "></span>Earth<img src="/assets/icon-chevron.svg" alt="Arrow"></a></li>
+          <li><a class=" text-white flex" href="#"><span class="bg-mars "></span>Mars<img src="/assets/icon-chevron.svg" alt="Arrow"></a></li>
+          <li><a class=" text-white flex" href="#"><span class="bg-jupiter "></span>Jupiter<img src="/assets/icon-chevron.svg" alt="Arrow"></a></li>
+          <li><a class=" text-white flex" href="#"><span class="bg-saturn "></span>Saturn<img src="/assets/icon-chevron.svg" alt="Arrow"></a></li>
+          <li><a class=" text-white flex" href="#"><span class="bg-uranus "></span>Uranus<img src="/assets/icon-chevron.svg" alt="Arrow"></a></li>
+          <li><a class=" text-white flex" href="#"><span class="bg-neptune "></span> Neptune<img src="/assets/icon-chevron.svg" alt="Arrow"></a></li>
+          
         </ul>
       </nav>
 
