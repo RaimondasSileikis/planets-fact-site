@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="index.css">
     <script src="nav.js" defer ></script>
+    <script src="tabs.js" defer ></script>
     <title>Frontend Mentor | Planets fact site</title>
   </head>
   <body class="mercury">
@@ -39,17 +40,29 @@
 
   <main id="main" class="grid-container flow">
 
-    <div class="tab-list button-indicators underline-indicators flex">
-      <button class="button  "><span>01</span><span></span><span>Overview</span></button>
-      <button class="button "><span>02</span><span>Internal </span> <span>Structure</span></button>
-      <button class="button "><span>03</span><span>Surface</span> <span>Geology</span></button>
+    <div role="tablist" class="tab-list button-indicators underline-indicators flex">
+      <button aria-selected="true" aria-controls-panel="overview-panel" aria-controls-picture="overview-picture" role="tab" tabindex="0" class="button  "><span>01</span><span></span><span>Overview</span></button>
+      <button aria-selected="false" aria-controls-panel="structure-panel" aria-controls-picture="structure-picture" role="tab" tabindex="-1" class="button "><span>02</span><span>Internal </span> <span>Structure</span></button>
+      <button aria-selected="false" aria-controls-panel="surface-panel" aria-controls-picture="surface-picture" role="tab" tabindex="-1" class="button "><span>03</span><span>Surface</span> <span>Geology</span></button>
     </div>
     
-    <picture>
-      <img src="/assets/planet-mercury.svg" alt="planet-mercury">
+    <!-- Overview -->
+    <picture id="overview-picture" role="tabpicture">
+      <img src="/assets/planet-mercury.svg" alt="The planet mercury">
     </picture>
 
-    <article class="detail flow">
+    <!-- Internal structure -->
+    <picture hidden id="structure-picture" role="tabpicture">
+      <img src="/assets/planet-mercury-internal.svg" alt="The planet mercury internal">
+    </picture>
+
+    <!-- Surface geology -->
+    <picture hidden id="surface-picture" role="tabpicture">
+      <img src="/assets/geology-mercury.png" alt="The planet mercury geology">
+    </picture>
+
+    <!-- Overview -->
+    <article id="overview-panel" role="tabpanel" class="detail flow">
       <h1 class=" ff-antonio fs-700 uppercase" >Mercury</h1>
       <p class="content" >Mercury is the smallest planet in the Solar System and the closest 
         to the Sun. Its orbit around the Sun takes 87.97 Earth days, the 
@@ -63,6 +76,39 @@
       </p>
 
     </article>
+
+    <!-- Internal structure -->
+    <article hidden id="structure-panel" role="tabpanel" class="detail flow">
+      <h1 class=" ff-antonio fs-700 uppercase" >Mercury</h1>
+      <p class="content" >Mercury appears to have a solid silicate crust and mantle overlying a 
+        solid, iron sulfide outer core layer, a deeper liquid core layer, and 
+        a solid inner core. The planet's density is the second highest in the 
+        Solar System at 5.427 g/cm3 , only slightly less than Earth's density.</p>
+      <p class=" source flex" > 
+          <span>Source :</span> 
+          <a class="text-white flex " href="https://en.wikipedia.org/wiki/Mercury_(planet)#Internal_structure">Wikipedia
+          <img src="/assets/icon-source.svg" alt="Mercury wikipedia">
+          </a>
+      </p>
+
+    </article>
+
+    <!-- Surface geology -->
+    <article hidden id="surface-panel" role="tabpanel" class="detail flow">
+      <h1 class=" ff-antonio fs-700 uppercase" >Mercury</h1>
+      <p class="content" >Mercury's surface is similar in appearance to that of the Moon, showing 
+        extensive mare-like plains and heavy cratering, indicating that it has 
+        been geologically inactive for billions of years. It is more heterogeneous 
+        than either Mars's or the Moon’s.</p>
+      <p class=" source flex" > 
+          <span>Source :</span> 
+          <a class="text-white flex " href="https://en.wikipedia.org/wiki/Mercury_(planet)#Internal_structure">Wikipedia
+          <img src="/assets/icon-source.svg" alt="Mercury wikipedia">
+          </a>
+      </p>
+
+    </article>
+
 
     <div class="meta flex uppercase">
       <div class="flex" >
