@@ -58,6 +58,7 @@ body {
     font-size: var(--fs-400);
     color: hsl(var(--clr-white));
     background-color: hsl( var(--clr-dark) );
+    background-image: url(/assets/background-stars.svg);
     line-height: 1.5625rem;
     min-height: 100vh;
 }
