@@ -69,12 +69,10 @@ function changeTabPanel(e) {
     showContent(mainContainer, [`#${targetPanel}`]);
     showContent(mainContainer, [`#${targetPicture}`]);
 
-
     tabListContainer
         .querySelector(`[aria-selected='true']`)
         .setAttribute('aria-selected', false);
 
     targetTab
         .setAttribute('aria-selected', true);
-
 } 

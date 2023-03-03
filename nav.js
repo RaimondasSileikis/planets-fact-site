@@ -12,4 +12,10 @@ meniuButton.addEventListener('click', () => {
         meniuList.setAttribute('data-visible', false)
         meniuButton.setAttribute('aria-expanded', false)
     }
-})
+});
+
+meniuList.addEventListener('click', () => {
+    meniuList.setAttribute('data-visible', false)
+    meniuButton.setAttribute('aria-expanded', false)
+
+});
