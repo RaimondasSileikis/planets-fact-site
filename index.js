@@ -20,8 +20,8 @@ fetch('./data.json')
 
         const overviewPicture = document.querySelector('#overview-picture > img');
         const structurePicture = document.querySelector('#structure-picture > img');
-        const geologyPictureOverview = document.querySelector('#geology-picture > .img-owerview');
-        const geologyPictureGeology = document.querySelector('#geology-picture > .img-geology');
+        const geologyPictureOverview = document.querySelector('#geology-picture > .img-surface > .img-owerview');
+        const geologyPictureGeology = document.querySelector('#geology-picture > .img-surface > .img-geology');
         
         overviewPicture.setAttribute('src', planetData.images.planet);
         structurePicture.setAttribute('src', planetData.images.internal);

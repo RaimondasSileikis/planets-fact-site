@@ -46,7 +46,7 @@
     </div>
     
     <!-- Overview -->
-    <picture id="overview-picture" role="tabpicture">
+    <picture class="grid" id="overview-picture" role="tabpicture">
       <img src="/assets/planet-mercury.svg" alt="The planet mercury">
     </picture>
 
@@ -57,8 +57,11 @@
 
     <!-- Surface geology -->
     <picture hidden id="geology-picture" role="tabpicture">
-      <img class="img-owerview"  src="/assets/planet-mercury.svg" alt="The planet mercury">
-      <img class="img-geology" src="/assets/geology-mercury.png" alt="The planet mercury geology">
+      <div class="img-surface flex">
+        <img class="img-owerview"  src="/assets/planet-mercury.svg" alt="The planet mercury">
+        <img class="img-geology" src="/assets/geology-mercury.png" alt="The planet mercury geology">
+      </div>
+      
     </picture>
 
     <!-- Overview -->

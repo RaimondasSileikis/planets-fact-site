@@ -61,11 +61,15 @@ body {
     background-image: url(/assets/background-stars.svg);
     line-height: 1.5625rem;
     min-height: 100vh;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    overflow-x:hidden;
 }
 
 img,
 picture {
-    max-width: 100%;
+    max-width: 90%;
+  
     display: block-inline;
 }
 
@@ -90,7 +94,6 @@ select {
 /* Utility classes */
 .flex {
     display: flex;
-    /* align-items: center; */
     gap: var(--gap, 1rem);
 }
 
@@ -201,20 +204,19 @@ select {
     margin-left: 0.5em;
 }
 
-@media (min-width: 24.43rem) {
-    .button-indicators >  *:hover{
+@media (min-width: 23.43rem) {
+    .button-indicators > *:focus,
+    .button-indicators >  *:hover {
         background-color: hsl( var(--clr-accent-dark) );
     }
 
-    .button-indicators > *[aria-selected='true'],
-    .button-indicators > *:focus {
+    .button-indicators > *[aria-selected='true'] {
         background-color: hsl( var(--clr-mercury) );
         border: transparent;
     }
 }
 
 /* primary-header */
-
 .primary-header {
     align-items: center;
     justify-content: space-between;
@@ -381,10 +383,10 @@ display: none;
 /* Layout */
 .grid-container {
     display: grid;
-    margin-top: 4rem;
-    --flow-space:calc(12% - 4rem);
+    margin: 3rem 0 1rem;
+    --flow-space: 1rem;
     column-gap: var(--container-gap, 0);
-    grid-template-columns: minmax(2rem, 1fr) repeat(3, minmax(0, 26rem)) minmax(2rem, 1fr);
+    grid-template-columns: minmax(2rem, 1fr) repeat(3, minmax(0, 28rem)) minmax(2rem, 1fr);
     grid-template-areas:
     '. image image detail .'
     '. image image tabs .'
@@ -392,37 +394,40 @@ display: none;
 }
    
    .grid-container > picture {
-       grid-area: image;
-       place-self: center;
-       align-self:baseline;
-       max-width: 40%;
-       margin: 6rem 0;
-       position: relative;
+        grid-area: image;
+        place-self: center;
+        text-align: center;
+        place-items: center;
+   }
+
+   .grid-container .img-surface {
+        position: relative;
+        justify-content: center;
    }
  
    .grid-container  .img-geology {
-    position: absolute;
-    width: 50%;
-    left: 0;
-    bottom: 0;
-    transform: translate(50%, 50%);
+        position: absolute;
+        width: 8rem;
+        margin-top: 60%;
 }
   
    .grid-container > .detail {
         grid-area: detail;
         --flow-space: 1rem;
-        margin-bottom: 4vh;
+        align-self:flex-end;
    }    
    
    .grid-container > .tab-list {
         grid-area: tabs;
         flex-direction: column;
+        align-self: center;
    }
   
    .grid-container > .meta {
         min-width: 100%;
         grid-area: meta;
         --gap: max(1rem, 2%);
+        align-self: end;
    }
 
    .grid-container > .meta  > * {
@@ -451,12 +456,11 @@ display: none;
 @media (min-width: 23.43rem) and (max-width: 48rem) {
     .grid-container {
         display: grid;
-        margin: 0;
-        text-align: left;
-        column-gap: var(--container-gap, 1rem);
-        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
-        --flow-space: 2rem;
-        place-items: center;
+        margin: 0 0 1rem;
+        column-gap: var(--container-gap, 0);
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 22rem)) minmax(1rem, 1fr);
+        grid-template-rows:1fr min-content;
+        place-items:end;
         grid-template-areas:
             '. image image .'
             '. detail tabs .' 
@@ -465,13 +469,26 @@ display: none;
 
     .grid-container > picture {
         grid-area: image;
-        width: 26%;
-        margin: 6rem 0;
+        text-align: center;
+    }
+
+    .grid-container > picture > img {
+        width: calc(70% - 4rem);
+    }
+
+    .grid-container  .img-owerview {
+       width: 60%;
+    }
+ 
+    .grid-container  .img-geology {
+        width: calc(22% - 0.5rem);
+        transform: translateY(-70%);
     }
     
     .grid-container > .detail {
         grid-area: detail;
-        margin: 0;
+        margin-right: 1.5em;
+       align-self: center;
     }
 
     .grid-container > .detail h1 {
@@ -495,6 +512,7 @@ display: none;
         min-width: 100%;
         padding-left: 4em;
         flex-direction: column;
+        align-self: center;
     }
     
     .grid-container > .tab-list > .button {
@@ -504,13 +522,14 @@ display: none;
     .grid-container > .meta {
         grid-area: meta;
          --gap: 0.5rem;
+         align-self: center;
     }
     
     .grid-container > .meta  > * {
-     flex-direction: column;
-     --gap:0.5em;
-     padding: 1em 1em 1.5em;
-     border: 1px solid hsl( var(--clr-accent-dark) );
+        flex-direction: column;
+        --gap:0.5em;
+        padding: 1em 1em 1.5em;
+        border: 1px solid hsl( var(--clr-accent-dark) );
     }
 
     .grid-container > .meta  h4 {
@@ -529,12 +548,13 @@ display: none;
 @media (max-width: 23.42999rem) {
     .grid-container {
         display: grid;
-        margin: 0;
+        margin: 0 0 1rem;
         --flow-space: 2rem;
         text-align: center;
         place-items: center;
         --container-gap: 1rem;
         grid-template-columns: 1fr;
+        grid-template-rows:min-content 1fr ;
         grid-template-areas:
         '. tabs .'
         '. image .'
@@ -566,11 +586,8 @@ display: none;
         --opacity: 0.5;
     }
     
-    /* .underline-indicators > *[aria-selected='true'] {
-background-color: red;
-    } */
-    .underline-indicators > *[aria-selected='true'],
-    .underline-indicators > *:focus {
+    .underline-indicators > *[aria-selected='true']
+     {
         opacity: 1;
         border-bottom: 0.25rem solid hsl( var(--clr-mercury) / 1 );
     }
@@ -585,9 +602,21 @@ background-color: red;
     
     .grid-container > picture {
         grid-area: image;
-        max-width: 35%;
-        margin: 6rem 0;
     }
+
+    .grid-container > picture > img {
+        max-width: 40%;
+    }
+
+    .grid-container  .img-owerview {
+       width: 40%;
+    }
+
+    .grid-container  .img-geology {
+        width: 20%;
+        width: calc(20% - 0.5rem);
+        transform: translateY(-150%);
+     }
 
     .grid-container > .detail  {
         margin: 0;
