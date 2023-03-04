@@ -6,16 +6,15 @@ meniuButton.addEventListener('click', () => {
     const visibility = meniuList.getAttribute('data-visible');
 
     if (visibility === 'false') {
-        meniuList.setAttribute('data-visible', true)
-        meniuButton.setAttribute('aria-expanded', true)
+        meniuList.setAttribute('data-visible', true);
+        meniuButton.setAttribute('aria-expanded', true);
     } else {
-        meniuList.setAttribute('data-visible', false)
-        meniuButton.setAttribute('aria-expanded', false)
+        meniuList.setAttribute('data-visible', false);
+        meniuButton.setAttribute('aria-expanded', false);
     }
 });
 
 meniuList.addEventListener('click', () => {
-    meniuList.setAttribute('data-visible', false)
-    meniuButton.setAttribute('aria-expanded', false)
-
+    meniuList.setAttribute('data-visible', false);
+    meniuButton.setAttribute('aria-expanded', false);
 });

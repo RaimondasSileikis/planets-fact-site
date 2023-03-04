@@ -15,6 +15,12 @@ fetch('./data.json')
         const targetPlanet = e.currentTarget;
         const targetLayout = targetPlanet.getAttribute('aria-controls-planet');
 
+        changePlanetColor(targetLayout);  
+        function changePlanetColor(color) {
+            const rootData = document.querySelector(':root');
+            rootData.style.setProperty('--clr-planet', `var(--clr-${color})`);
+        };
+
         const planetData = planetsData.filter(planet =>
             planet.name.toLowerCase() === targetLayout )[0];
 
