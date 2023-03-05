@@ -25,9 +25,9 @@ Users should be able to:
 
 ### Screenshot
 
-![Planets Fact Site](preview1.png)
-![Planets Fact Site](preview2.png)
-![Planets Fact Site](preview3.png)
+![Planets Fact Site Desktop](preview1.jpeg)
+![Planets Fact Site Tablet](preview2.jpeg)
+![Planets Fact Site Mobile](preview3.jpeg)
 
 ### Links
 
