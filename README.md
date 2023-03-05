@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Planet Fact Site](https://planets-fact-site.netlify.app)
+- Live Site URL: [Planet Fact Site](https://planets-fact-site1.netlify.app)
 
 ## My process
 
